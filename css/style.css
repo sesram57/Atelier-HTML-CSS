@@ -11158,31 +11158,6 @@ header nav .burger span .material-symbols-outlined {
 header nav .burger {
   display: none;
 }
-@media screen and (max-width: 767px) {
-  header nav .nav-links {
-    display: none;
-  }
-  header nav .burger {
-    display: block;
-    cursor: pointer;
-  }
-  header nav input[type=checkbox]:checked ~ .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 6vh;
-    right: 0;
-    background-color: white;
-    width: 50%;
-    height: 92vw;
-    border: #053B44 solid 2px;
-  }
-  header nav input[type=checkbox]:checked ~ .nav-links > li:hover {
-    background-color: #053B44;
-    color: white;
-  }
-}
 
 #accueil a {
   background-image: url("../images/rodion-kutsaev.jpg");
