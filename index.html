@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Agence web écologique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/brands.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }</script>
+</head>
+
+<body>
+    <header class="col col-100">
+        <nav>
+            <div class="titre" id="menu">
+                Agenc<span>eco</span>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="burger">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#equipe">Notre equipe</a></li>
+                <li><a href="#services">Nos services</a></li>
+                <li><a href="#temoignages">Témoignages</a></li>
+                <li><a href="#contact">Contactez-nous</a></li>
+                <li><a href="#gallerie">Notre galerie</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <section id="accueil">
+        <a href="page360.html">
+            <div class="container col col-100 px-30 py-50">
+                <div class="col-100 row-right">Bienvenue dans votre</div>
+                <div id="agence" class="col-100 row-right">agence web écologique</div>
+            </div>
+        </a>
+    </section>
+    <section id="equipe">
+        <div class="container col col-100 px-30 py-50">
+            <h3 class="titre">Notre équipe</h3>
+            <div class="explanation py-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
+                eiusmod
+                tempor
+                incididunt ut labore et dolore magna aliqua. </div>
+            <div class="content row col-100 py-30 col-sm">
+                <div class="vignette col col-33 row-sm col-sm-100 pb-sm-20">
+                    <div class="medaillon col col-100">
+                        <div class="photo" id="personne1"></div>
+                        <div class="nom">Julie Dupond</div>
+                    </div>
+                    <div class="description">Excepteur sint occaecat cupidatat non proident.<br> Sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</div>
+                </div>
+                <div class="vignette col col-33 row-sm col-sm-100 pb-sm-20">
+                    <div class="medaillon col col-100">
+                        <div class="photo" id="personne2"></div>
+                        <div class="nom">Romeo Sylla</div>
+                    </div>
+                    <div class="description">Excepteur sint occaecat cupidatat non proident.<br> Sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</div>
+                </div>
+                <div class="vignette col col-33 row-sm col-sm-100 pb-sm-20">
+                    <div class="medaillon col col-100">
+                        <div class="photo" id="personne3"></div>
+                        <div class="nom">Javier Bardem</div>
+                    </div>
+                    <div class="description">Excepteur sint occaecat cupidatat non proident.<br> Sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="temoignages" class="dark-bg">
+        <div class="container row col-100 px-30 py-50 col-sm">
+            <div class="item col col-25 col-sm-100 pb-sm-20">
+                <div class="compteur">2500</div>
+                <div class="categorie">Clients satisfaits</div>
+            </div>
+            <div class="item col col-25 col-sm-100 pb-sm-20">
+                <div class="compteur">2500</div>
+                <div class="categorie">Clients satisfaits</div>
+            </div>
+            <div class="item col col-25 col-sm-100 pb-sm-20">
+                <div class="compteur">2500</div>
+                <div class="categorie">Clients satisfaits</div>
+            </div>
+            <div class="item col col-25 col-sm-100 pb-sm-20">
+                <div class="compteur">2500</div>
+                <div class="categorie">Clients satisfaits</div>
+            </div>
+        </div>
+    </section>
+    <section id="services">
+        <div class="container col col-100 px-30 py-50">
+            <h3 class="titre">Notre service</h3>
+            <div class="content row-space-between col-sm">
+                <div class="item col col-33 pr-10  col-sm-100 pr-sm-0 pb-sm-20">
+                    <div class="logo col-100" id="logo1"></div>
+                    <div class="content pt-10">Création de sites web</div>
+                </div>
+                <div class="item col col-33 pl-10  col-sm-100 pl-sm-0">
+                    <div class="logo col-100" id="logo2"></div>
+                    <div class="content pt-10">Audit qualité</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="dark-bg">
+        <div class="container col col-100 px-30 py-50">
+            <h3 class="titre">Contactez-nous</h3>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor
+                incididunt
+                ut. </div>
+            <form action="#" class="col-100">
+                <div class="row col-100 col-sm">
+                    <div class="col col-50 pr-10 col-sm-100 pr-sm-0">
+                        <div class="col col-100 py-10"><label for="i-name" class="col-left">Nom</label><input
+                                type="text" name="name" id="i-name" autocomplete="family-name" class="col-100">
+                        </div>
+                        <div class="col col-100"><label for="i-telephone" class="col-left">Téléphone</label><input
+                                type="tel" name="telephone" id="i-telephone" class="col-100"></div>
+                    </div>
+                    <div class="col col-50 pl-10 col-sm-100 pl-sm-0">
+                        <div class="col col-100 py-10"><label for="i-categorie" class="col-left">Catégorie</label><input
+                                type="text" name="categorie" id="i-categorie" class="col-100"></div>
+
+                        <div class="col col-100"><label for="i-ville" class="col-left">Ville</label><input type="text"
+                                name="ville" id="i-ville" class="col-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-100"><label for="i-email" class="col-left">Email</label><input type="email"
+                        name="email" id="i-email" autocomplete="off" class="col-100"></div>
+                <div class="col col-100"><label for="i-message" class="col-left">Message</label><textarea name="message"
+                        id="i-message" rows="10" class="col-100"></textarea></div>
+                <div class="row col-100 row-right py-10"><button>Envoyer</button></div>
+            </form>
+        </div>
+    </section>
+    <section id="a_propos">
+        <div class="container row col-100 py-50 col-sm py-sm-20">
+            <div class="cadre col-50 pr-10 col-sm-100 pr-sm-0 mb-sm-30" id="image_propos"></div>
+            <div class="cadre col col-50 pl-10 col-sm-100 pl-sm-0">
+                <h3 class="titre">A propos de nous</h3>
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor
+                    incididunt
+                    ut.</div>
+                <div class="cercles mt-sm-20">
+                    <div class="item col col-33">
+                        <div class="cercle"></div>
+                        <div>&Eacute;cologique</div>
+                    </div>
+                    <div class="item col col-33">
+                        <div class="cercle"></div>
+                        <div>Responsable</div>
+                    </div>
+                    <div class="item col col-33">
+                        <div class="cercle"></div>
+                        <div>24/7 Assistance</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallerie">
+        <div class="container col col-100 px-30 py-50">
+            <h3 class="titre">Notre gallerie</h3>
+            <div class="content">Lorem ipsum</div>
+            <div class="carroussel">
+                <div class="slide fade">
+                    <img src="images/jason-goodman.jpg">
+                </div>
+
+                <div class="slide fade">
+                    <img src="images/kevin-bhagat.jpg">
+                </div>
+
+                <div class="slide fade">
+                    <img src="images/rodion-kutsaev.jpg">
+                </div>
+
+                <!-- Next and previous buttons -->
+
+            </div>
+            <div class="row col-100 row-space-between" id="rowSlide">
+                <div class="">
+                    <a class="cercle prev" onclick="plusSlides(-1)">&#10094;</a>
+                </div>
+                <div class="">
+                    <a class="cercle next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="informations" class="dark-bg">
+        <div class="container row col-100 px-30 py-50 row-sm ">
+            <div class="col col-20 col-sm-50 py-sm-10">
+                <div class="entete">
+                    Content
+                </div>
+                <div class="content">
+                    occaecat cupidatat
+                </div>
+            </div>
+            <div class="col col-20 col-sm-50 py-sm-10">
+                <div class="entete">
+                    Informations
+                </div>
+                <div class="content">
+                    occaecat cupidatat
+                </div>
+            </div>
+            <div class="col col-20 col-sm-50 py-sm-10">
+                <div class="entete">
+                    Services
+                </div>
+                <div class="content">
+                    occaecat cupidatat
+                </div>
+            </div>
+            <div class="col col-20 col-sm-50 py-sm-10">
+                <div class="entete">
+                    Aide
+                </div>
+                <div class="content">
+                    occaecat cupidatat
+                </div>
+            </div>
+            <div class="col col-20 row-sm col-sm-100 py-sm-10">
+                <div class="row col-sm col-100 col-sm-50 mb-10">
+                    <div class="material-symbols-outlined mr-5">
+                        call
+                    </div>
+                    <div class="col  py-sm-5">
+                        <div>
+                            +33 00 00 00 00 00
+                        </div>
+                        <div>
+                            +33 00 00 00 00 00
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-sm col-100 col-sm-50">
+                    <div class="material-symbols-outlined mr-5">location_on</div>
+                    <div class="col py-sm-5">
+                        <div>
+                            75001 Paris
+                        </div>
+                        <div>
+                            France
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container row row-space-between col-100 col-sm py-20">
+            <div class="row-left">Copyright &nbsp;<span class="material-symbols-outlined"> copyright </span>&nbsp; 2021
+                AGENCECO -
+                All
+                rights reserved </div>
+            <div class="row-right py-sm-10">
+                <div class="brand mr-5">
+                    <span class="fa-brands fa-facebook"></span>
+                </div>
+                <div class="brand mr-5">
+                    <span class="fa-brands fa-twitter"></span>
+                </div>
+                <div class="brand mr-5">
+                    <span class="fa-brands fa-instagram"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

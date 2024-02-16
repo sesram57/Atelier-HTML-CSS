@@ -1,0 +1,766 @@
+$background_dark: #053B44;
+$text: #565E65;
+$title_2: #029D5B;
+$titles: #1C2126;
+$yellow: #D5F31F;
+
+$espaces : (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$directions: (
+    top,
+    bottom,
+    left,
+    right
+);
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+@import "../scss/brands.scss";
+
+@each $espace in $espaces {
+    @each $direction in $directions {
+        .m#{str-slice($direction, 0,1)}-#{$espace} {
+            margin-#{$direction}: #{$espace}px !important;
+        }
+
+        .p#{str-slice($direction, 0,1)}-#{$espace} {
+            padding-#{$direction}: #{$espace}px !important;
+        }
+    }
+
+    .mx-#{$espace} {
+        margin-left:#{$espace}px !important;
+        margin-right:#{$espace}px !important;
+    }
+
+    .my-#{$espace} {
+        margin-top:#{$espace}px !important;
+        margin-bottom:#{$espace}px !important;
+    }
+
+    .px-#{$espace} {
+        padding-left:#{$espace}px !important;
+        padding-right:#{$espace}px !important;
+    }
+
+    .py-#{$espace} {
+        padding-top:#{$espace}px !important;
+        padding-bottom:#{$espace}px !important;
+    }
+
+}
+
+@mixin div-cercle($couleur, $epaisseur, $diametre) {
+    border: #{$couleur} #{$epaisseur}px solid;
+    border-radius: calc((#{$diametre}px /2) + 5px);
+    height: #{$diametre}px;
+    width: #{$diametre}px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', serif;
+    color: $text;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+div {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.col {
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.col-100 {
+    width: 100%;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-33 {
+    width: 33.33%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-20 {
+    width: 20%;
+}
+
+.col-auto {
+    width: auto;
+}
+
+.titre {
+    font-size: 2rem;
+    color: $title_2;
+}
+
+.col-left {
+    align-self: flex-start;
+    align-items: normal;
+}
+
+.col-right {
+    align-self: flex-end;
+    align-items: normal;
+}
+
+.row-left {
+    justify-content: flex-start;
+    align-items: normal;
+}
+
+.row-right {
+    justify-content: flex-end;
+    align-items: normal;
+}
+
+.row-space-between {
+    justify-content: space-between;
+}
+
+.dark-bg {
+    background-color: $background_dark;
+}
+
+div {
+    text-align: center;
+}
+
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+
+        & div#menu {
+            color: darkgreen;
+            margin: 10px 40px;
+            font-size: 1.5rem;
+            font-weight: 900;
+
+            &>span {
+                font-style: italic;
+            }
+        }
+
+        li {
+            display: inline;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 750px;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .burger span {
+
+            .material-symbols-outlined {
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+            }
+        }
+
+        .burger {
+            display: none;
+        }
+
+
+    }
+}
+
+#accueil {
+    & a {
+        background-image: url('../images/rodion-kutsaev.jpg');
+        height: 400px;
+        display: flex;
+
+        .container {
+            text-align: right;
+            justify-content: flex-end;
+
+            & div {
+                color: white;
+                font-size: 2rem;
+                order: -1;
+                margin-bottom: 0;
+            }
+
+            & #agence {
+                color: #D5F31F;
+                font-size: 2.5rem;
+                margin-top: 0;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+#equipe {
+
+    .container {
+        & .explanation {
+            font-weight: bolder;
+            font-size: 1rem;
+            color: black;
+        }
+
+        .photo {
+            height: 200px;
+            width: 200px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 150px;
+        }
+
+        #personne1 {
+            background-image: url("../images/image1.jpg");
+        }
+
+        #personne2 {
+            background-image: url("../images/image2.jpg");
+        }
+
+        #personne3 {
+            background-image: url("../images/image3.jpg");
+        }
+
+        .nom {
+            padding-top: 10px;
+            color: black;
+            font-weight: bolder;
+            font-size: 1rem;
+        }
+
+        .description {
+            max-width: 200px;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+#contact {
+    color: white;
+
+    & input,
+    & textarea {
+        background-color: $background_dark;
+        border: 0px $background_dark;
+        padding: 0;
+        color: white;
+        border-bottom: white solid 2px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & button {
+        background-color: $yellow;
+        border: none;
+        color: $background_dark;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bolder;
+        margin: 4px 2px;
+        border-radius: 50px;
+        width: 15%;
+    }
+}
+
+
+#temoignages {
+    background-color: $background_dark;
+
+    .compteur {
+        color: $yellow;
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    .categorie {
+        color: white;
+    }
+}
+
+#services {
+    .logo {
+        height: 230px;
+        width: 230px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(211, 211, 211, 0.5);
+        border-radius: 20px;
+        background-blend-mode: multiply;
+    }
+
+    #logo1 {
+        background-image: url("../images/Vector.jpg");
+    }
+
+    #logo2 {
+        background-image: url("../images/Vector-1.jpg");
+    }
+
+    .item>.content {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 900;
+        color: black;
+    }
+
+}
+
+#a_propos {
+    .container {
+        .cadre {
+            height: 330px;
+
+            &#image_propos {
+                background: url("../images/jason-goodman.jpg") no-repeat content-box;
+                background-size: cover;
+                border-radius: 20px;
+            }
+
+            &:not(#image_propos) {
+                border: black solid 2px;
+                border-radius: 10px;
+            }
+
+
+            .cercle {
+                @include div-cercle(black, 3, 60);
+                background-repeat: no-repeat;
+            }
+
+            .item:nth-child(1)>.cercle {
+                background-image: url(../images/Vector-2.jpg);
+                background-size: 34px;
+                background-position-x: 11px;
+                background-position-y: 11px;
+            }
+
+            .item:nth-child(2)>.cercle {
+                background-image: url(../images/Vector-3.jpg);
+                background-size: 34px;
+                background-position-x: 10px;
+                background-position-y: 14px;
+            }
+
+            .item:nth-child(3)>.cercle {
+                background-image: url(../images/Vector-4.jpg);
+                background-size: 34px;
+                background-position-x: 12px;
+                background-position-y: 11px;
+            }
+        }
+    }
+}
+
+#gallerie {
+    .carroussel {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    .slide {
+        display: none;
+
+        &:nth-child(1) {
+            display: block;
+        }
+
+        &>img {
+            border-radius: 20px;
+            width: 100%;
+        }
+    }
+
+    #rowSlide {
+        max-width: 1000px;
+    }
+
+    .cercle {
+        @include div-cercle(black, 2, 30);
+    }
+
+    .prev,
+    .next {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+
+        a {
+            cursor: pointer;
+            position: absolute;
+            top: 100%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+}
+
+
+#informations {
+    div {
+        color: white;
+        font-size: 13px;
+    }
+
+    .entete {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .content {
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
+
+    .material-symbols-outlined {
+        color: $yellow;
+    }
+}
+
+footer {
+    background-color: $titles;
+    display: flex;
+    color: white;
+
+    & div {
+        align-items: center;
+    }
+
+    & span.material-symbols-outlined {
+        position: relative;
+        top: 3px;
+        left: 0px;
+        display: block;
+        font-size: 18px;
+    }
+
+    & .brand {
+        border: white 2px solid;
+        border-radius: 5px;
+        height: 30px;
+        width: 30px;
+        color: white;
+
+        & span {
+            height: 20px;
+            width: 20px;
+            position: relative;
+            top: 3px;
+            left: 4px;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    @each $espace in $espaces {
+        @each $direction in $directions {
+            .m#{str-slice($direction, 0,1)}-sm-#{$espace} {
+                margin-#{$direction}: #{$espace}px !important;
+            }
+
+            .p#{str-slice($direction, 0,1)}-sm-#{$espace} {
+                padding-#{$direction}: #{$espace}px !important;
+            }
+        }
+
+        .mx-sm-#{$espace} {
+            margin-left:#{$espace}px !important;
+            margin-right:#{$espace}px !important;
+        }
+
+        .my-sm-#{$espace} {
+            margin-top:#{$espace}px !important;
+            margin-bottom:#{$espace}px !important;
+        }
+
+        .px-sm-#{$espace} {
+            padding-left:#{$espace}px !important;
+            padding-right:#{$espace}px !important;
+        }
+
+        .py-sm-#{$espace} {
+            padding-top:#{$espace}px !important;
+            padding-bottom:#{$espace}px !important;
+        }
+    }
+
+    div {
+        .titre {
+            font-size: 1.5rem;
+        }
+    }
+
+    .row-sm {
+        flex-direction: row;
+    }
+
+    .col-sm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sm-left {
+        align-self: flex-start;
+        align-items: normal;
+    }
+
+    .col-sm-right {
+        align-self: flex-end;
+        align-items: normal;
+    }
+
+    .row-sm-left {
+        justify-content: flex-start;
+        align-items: normal;
+    }
+
+    .row-sm-right {
+        justify-content: flex-end;
+        align-items: normal;
+    }
+
+    .row-space-between {
+        justify-content: space-between;
+    }
+
+    .col-sm-100 {
+        width: 100%;
+    }
+
+    .col-sm-50 {
+        width: 50%;
+    }
+
+    .col-sm-33 {
+        width: 33.33%;
+    }
+
+    .col-sm-25 {
+        width: 25%;
+    }
+
+    header {
+        nav {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+
+            input[type=checkbox]:checked~.nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 6vh;
+                right: 0;
+                background-color: white;
+                width: 50%;
+                height: 92vw;
+                border: $background_dark solid 2px;
+
+                &>li:hover {
+                    background-color: $background_dark;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #agence {
+        text-align: right;
+    }
+
+    #contact {
+
+        & button {
+            padding: 9px;
+            width: 27%;
+        }
+    }
+
+    #services {
+        .logo {
+            height: 230px;
+            width: 230px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: rgba(211, 211, 211, 0.5);
+            border-radius: 20px;
+            background-blend-mode: multiply;
+        }
+
+        #logo1 {
+            background-image: url("../images/Vector.jpg");
+        }
+
+        #logo2 {
+            background-image: url("../images/Vector-1.jpg");
+        }
+    }
+
+    #a_propos {
+        .container {
+            .cadre {
+                height: 330px;
+
+                &#image_propos {
+                    border-radius: 20px;
+                }
+
+                &:not(#image_propos) {
+                    border-radius: 10px;
+                }
+
+                .cercle {
+                    @include div-cercle(black, 3, 60);
+                }
+
+                .item:nth-child(1)>.cercle {
+                    background-size: 34px;
+                    background-position-x: 11px;
+                    background-position-y: 11px;
+                }
+
+                .item:nth-child(2)>.cercle {
+                    background-size: 34px;
+                    background-position-x: 10px;
+                    background-position-y: 14px;
+                }
+
+                .item:nth-child(3)>.cercle {
+                    background-size: 34px;
+                    background-position-x: 12px;
+                    background-position-y: 11px;
+                }
+            }
+        }
+    }
+
+    #gallerie {
+        .carroussel {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+
+            &:nth-child(1) {
+                display: block;
+            }
+
+            &>img {
+                border-radius: 20px;
+                width: 100%;
+            }
+        }
+
+        #rowSlide {
+            max-width: 700px;
+        }
+
+        .cercle {
+            @include div-cercle(black, 2, 30);
+        }
+    }
+
+    footer {
+        font-size: 15px;
+    }
+
+}
